@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d, e, f, g;
+    int result1, result2;
+
+    printf("Enter a: ");
+    scanf("%d", &a);
+
+    printf("Enter b: ");
+    scanf("%d", &b);
+
+    printf("Enter c: ");
+    scanf("%d", &c);
+
+    printf("Enter d: ");
+    scanf("%d", &d);
+
+    printf("Enter e: ");
+    scanf("%d", &e);
+
+    printf("Enter f: ");
+    scanf("%d", &f);
+
+    printf("Enter g: ");
+    scanf("%d", &g);
+
+    if (e == 0)
+    {
+        printf("Division by zero error\n");
+        return 0;
+    }
+
+    if (g == 0)
+    {
+        printf("Modulus by zero error\n");
+        return 0;
+    }
+
+    result1 = a + b * c - d / e + f % g;
+
+    result2 = a + (b * c) - (d / e) + (f % g);
+
+    printf("\nResult1 = %d\n", result1);
+    printf("Result2 = %d\n", result2);
+
+    if (result1 == result2)
+    {
+        printf("Operator precedence is verified.\n");
+    }
+    else
+    {
+        printf("Operator precedence is not verified.\n");
+    }
+
+    return 0;
+}
